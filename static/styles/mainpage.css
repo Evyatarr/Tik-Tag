@@ -2,13 +2,14 @@
 body {
   background-color: rgb(255, 255, 255);
   font-family: 'Rubik', sans-serif;
+  min-height: 100vh;
 }
 
 h1 {
   
   margin-top: 30px;
   color: #1840c4;
-  text-shadow: 10px;
+  text-shadow: 20px;
   text-align: center;
   font-size: xx-large;
   
@@ -67,4 +68,18 @@ a.wa_button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
 }
+
+p.field1,p.field2,p.submit_button{
+  display: block;
+  background-color:none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  border: none;
+  text-align:right;
+  
+} 
