@@ -27,14 +27,11 @@ WhatsApp עם המספר שלכם כך שיהיה ניתן להשיג אתכם �
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">טלפון</label>
-      <input type="tel" class="form-control" name = "field2_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" >
+      <input type="tel" class="form-control" name = "field2_phone" pattern="[0-9]{9}" >
     </div>
     <button type="submit" class="btn btn-primary">שלח</button>
   </form>
-<!--cform action="/" method = "POST">
-    <p class="field1">שם <input type = "text" name = "field1_name" placeholder="הכניסו שם"  /></p>
-    <p class="field2">טלפון <input type = "tel" name = "field2_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"placeholder="054-123-4567" /></p>
-</form--->
+
 {% if link %}
  <P>
     <a href="{{link}}" class="wa_button">    הקישור שלך:    </a>
