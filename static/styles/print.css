@@ -1,13 +1,12 @@
-body {visibility:hidden;}
-.print {visibility:visible;}
-.print{
+body {
+  visibility: hidden;
+  display: none;
+}
+.print {
+  visibility: visible;
+  display: block;
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 0px;
 
-    overflow: visible !important; 
-    float:none !important;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    display:block !important;
-    page-break-before: always;
-    /*height:auto !important;*/
 }
