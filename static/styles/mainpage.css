@@ -25,17 +25,13 @@ h2 {
   
   
 }
-p {
+p, .p {
   font-size: large;
   background-color: rgb(24, 64, 196,0.03);
   text-align: center;
   border: 2px solid rgb(24, 64, 196,0.3);
   border-radius: 10px;
-  margin-top: 50px;
-  margin-bottom: 10px;
-  margin-right: 40px;
-  margin-left: 40px;
-
+padding: 15px 40px ;
   
 } 
 
@@ -82,4 +78,5 @@ p.field1,p.field2,p.submit_button{
   border: none;
   text-align:right;
   
-} 
+}
+

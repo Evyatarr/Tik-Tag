@@ -33,11 +33,12 @@ WhatsApp עם המספר שלכם כך שיהיה ניתן להשיג אתכם �
   </form>
 
 {% if link %}
- <P>
-    <a href="{{link}}" class="wa_button">    הקישור שלך:    </a>
+ <div class="p">
+    <a href="{{link}}"class="btn btn-secondary" id="wa_button">    הקישור שלך:    </a>
     <br>
-        <img src="{{ qrcode(link,box_size=5, error_correction='H', icon_img='/static/logo.jpg')}}">
-    </P>
+        <img  class="img-fluid print py-3" src="{{ qrcode(link,box_size=5, error_correction='H', icon_img='/static/logo.jpg')}}"> 
+        <button class="btn btn-primary"onclick="window.print();return false;"  id="print_button">הדפס</button>
+ </div>
 {% endif %}
 
 <img src="/static/travelers.svg" class="travelers" >
