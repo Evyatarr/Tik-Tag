@@ -45,11 +45,19 @@
       </div>
     </nav>
     <div class="container">
-    <h1>{%block header%} {%endblock%}</h1>
+      <div class="row">
+        <div class="order-1 order-sm-2 col-sm">
+          {%block pic%} {%endblock%}
+</div>
+ <div class="col-sm">    
+  <h1>{%block header%} {%endblock%}</h1>
     <h2>{%block subtitle%} {%endblock%}</h2>
  <p>{%block content%} {%endblock%}</p> 
- {%block var%} {%endblock%}
+  {%block var%} {%endblock%}
 </div>
+      </div>
+</div>
+
 
   <footer class="footer mt-auto py-3 bg-light">
     <div class="container">
