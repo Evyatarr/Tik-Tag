@@ -22,22 +22,23 @@ WhatsApp עם המספר שלכם כך שיהיה ניתן להשיג אתכם �
 <form action="/" method = "POST">
     <div class="mb-3">
       <label for="EnterName" class="form-label">שם</label>
-      <input type="text" class="form-control" name = "field1_name"  id="EnterName" aria-describedby="nameHelp">
+      <input type="text" class="form-control" name = "field1_name"  id="EnterName" aria-describedby="nameHelp" required>
       <div id="nameHelp" class="form-text">הכניסו את שמכם באנגלית.</div>
     </div>
     <div class="mb-3">
       <label for="EnterPhone" class="form-label">טלפון</label>
-      <input type="tel" class="form-control" name = "field2_phone" pattern="[0-9]{10}" >
+      <input type="tel" class="form-control" name = "field2_phone" pattern="[0-9]{10}" required >
     </div>
     <button type="submit" class="btn btn-primary">שלח</button>
   </form>
 
 {% if link %}
  <div class="p">
-    <a href="{{link}}"class="btn btn-secondary" id="wa_button">    הקישור שלך:    </a>
-    <br>
         <img  class="img-fluid print py-3" src="{{ qrcode(link,box_size=5, error_correction='H', icon_img='/static/logo.jpg')}}"> 
+        <br>
         <button class="btn btn-primary"onclick="window.print();return false;"  id="print_button">הדפס</button>
+        <a href="{{link}}"class="btn btn-secondary" id="wa_button">קישור לאתר WhatsApp </a>
+        <br>
  </div>
 {% endif %}
 
