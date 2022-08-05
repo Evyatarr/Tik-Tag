@@ -5,8 +5,7 @@ body {
 .print {
   visibility: visible;
   display: block;
-  page-break-after: avoid;
   page-break-inside: avoid;
   margin-bottom: 0px;
-
+  page-break-after: auto;
 }
