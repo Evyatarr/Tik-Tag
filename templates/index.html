@@ -34,7 +34,7 @@ WhatsApp עם המספר שלכם כך שיהיה ניתן להשיג אתכם �
 
 {% if link %}
  <div class="p">
-        <img  class="img-fluid print py-3" src="{{ qrcode(link,box_size=5, error_correction='H', icon_img='/static/logo.jpg')}}"> 
+        <img  class="img-fluid print py-3" src="{{ qrcode(link,box_size=5, error_correction='H', icon_img='../static/scan.jpg')}}"> 
         <br>
         <button class="btn btn-primary"onclick="window.print();return false;"  id="print_button">הדפס</button>
         <a href="{{link}}"class="btn btn-secondary" id="wa_button">קישור לאתר WhatsApp </a>
