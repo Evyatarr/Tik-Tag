@@ -29,11 +29,11 @@ WhatsApp עם המספר שלכם כך שיהיה ניתן להשיג אתכם �
       <label for="EnterPhone" class="form-label">טלפון</label>
       <input type="tel" class="form-control" name = "field2_phone" pattern="[0-9]{10}" required >
     </div>
-    <button type="submit" class="btn btn-primary">שלח</button>
+    <button type="submit" href="#show_qr" class="btn btn-primary">שלח</button>
   </form>
 
 {% if link %}
- <div class="p">
+ <div class="p" id="show_qr">
         <img  class="img-fluid print py-3" src="{{ qrcode(link,box_size=5, error_correction='H', icon_img='../static/scan.jpg')}}"> 
         <br>
         <button class="btn btn-primary"onclick="window.print();return false;"  id="print_button">הדפס</button>
