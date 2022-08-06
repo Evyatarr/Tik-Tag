@@ -19,7 +19,7 @@ def home():
 def link_generator(name, phone):
     phone = phone.replace("-", "")
     phone = phone.replace("0", "972", 1)
-    message = (f"Hello {name}!, I found your luggage in (enter place)! Please contact me so you can take It back! ")
+    message = (f"Hello {name}!, I've found your luggage! Please contact me so you can take It back! ")
     encoded_message = urllib.parse.quote(message)
     wa_link = (f"https://wa.me/{phone}?text={encoded_message}")
     return wa_link
