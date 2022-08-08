@@ -1,5 +1,6 @@
 :is(body *:not(.container *, .container).row *:not(:last-child *, :last-child), .col-md *:not(#show_qr *, #show_qr ), footer, nav *, a, button){
   display: none;
+
   }  
   *{
     margin: 0 !important;
