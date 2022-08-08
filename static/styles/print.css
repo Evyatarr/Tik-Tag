@@ -1,16 +1,9 @@
-body {
-  visibility: hidden;
+:is(body *:not(.container *, .container).row *:not(:last-child *, :last-child), .col-md *:not(#show_qr *, #show_qr ), footer, nav *, a, button){
   display: none;
-  max-height: 400px;
-  overflow: hidden;
-}
-.print {
-  position: absolute;
-  top: 0;
-  visibility: visible;
-  display: block;
-  page-break-inside: avoid;
-  margin-bottom: 0px;
-  page-break-after: auto;
-  
-}
+  }  
+  *{
+    margin: 0 !important;
+    text-align: center;
+    border: 0 !important;
+    padding: 0 !important;
+  }
