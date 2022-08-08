@@ -1,7 +1,7 @@
 body {
   visibility: hidden;
   display: none;
-  max-height: 80vh;
+  max-height: 400px;
   overflow: hidden;
 }
 .print {
