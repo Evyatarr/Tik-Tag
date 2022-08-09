@@ -1,5 +1,5 @@
 # Tik Tag
 Saas Project. 
-Using HTML, Flask , Python , CSS<br >
-Website that creates printable customized QR codes with WhatsApp link to contact user, for user to print and stick on a suitcase <br>
-The printable QR code is built in python backend environment using Flask <br>
+Using HTML, Flask, Python, CSS, and Bootstrap. <br>
+A website that creates printable customized QR codes with a WhatsApp link to contact the user, for the user to print and stick on a suitcase <br>
+The printable QR code is built in a Python backend environment implemented using Flask <br>
