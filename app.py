@@ -23,7 +23,6 @@ def link_generator(name, phone):
     encoded_message = urllib.parse.quote(message)
     wa_link = (f"https://wa.me/{phone}?text={encoded_message}")
     return wa_link
-//
 
 @app.route("/about")
 def about():
