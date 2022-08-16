@@ -29,5 +29,21 @@ def about():
     return render_template("about.html")
 
 
+@app.route("/usa", methods=["POST", "GET"])
+def usa():
+    if request.method == "POST":
+        html_name = request.form.get("field1_name")
+        html_number = request.form.get("field2_phone")
+        return render_template("index.html", link=(link_generator_usa(html_name, html_number)))
+    return render_template("index.html")
+
+
+def link_generator_usa(name, phone):
+    phone = phone.replace("-", "")
+    message = (f"Hello {name}!, I've found your luggage! Please contact me so you can take It back! ")
+    encoded_message = urllib.parse.quote(message)
+    wa_link = (f"https://wa.me/1{phone}?text={encoded_message}")
+    return wa_link
+
 if __name__ == "__main__":
     app.run()
