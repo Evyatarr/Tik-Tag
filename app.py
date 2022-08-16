@@ -41,6 +41,7 @@ def usa():
 
 
 def link_generator_usa(name_usa,phone_usa):
+
     phone_usa = phone_usa.replace("-", "")
     phone_usa= ("1"+phone_usa)
     message = (
