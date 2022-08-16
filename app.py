@@ -19,10 +19,12 @@ def home():
 def link_generator(name, phone):
     phone = phone.replace("-", "")
     phone = phone.replace("0", "972", 1)
-    message = (f"Hello {name}!, I've found your luggage! Please contact me so you can take It back! ")
+    message = (
+        f"Hello {name}!, I've found your luggage! Please contact me so you can take It back! ")
     encoded_message = urllib.parse.quote(message)
     wa_link = (f"https://wa.me/{phone}?text={encoded_message}")
     return wa_link
+
 
 @app.route("/about")
 def about():
@@ -32,18 +34,21 @@ def about():
 @app.route("/usa", methods=["POST", "GET"])
 def usa():
     if request.method == "POST":
-        html_name = request.form.get("field1_name")
-        html_number = request.form.get("field2_phone")
-        return render_template("index.html", link=(link_generator_usa(html_name, html_number)))
-    return render_template("index.html")
+        html_name_usa = request.form.get("field1_name")
+        html_number_usa = request.form.get("field2_phone")
+        return render_template("usa.html", link=(link_generator_usa(html_name_usa, html_number_usa)))
+    return render_template("usa.html")
 
 
-def link_generator_usa(name, phone):
-    phone = phone.replace("-", "")
-    message = (f"Hello {name}!, I've found your luggage! Please contact me so you can take It back! ")
+def link_generator_usa(name_usa,phone_usa):
+    phone_usa = phone_usa.replace("-", "")
+    phone_usa= ("1"+phone_usa)
+    message = (
+        f"Hello {name_usa}!, I've found your luggage! Please contact me so you can take It back! ")
     encoded_message = urllib.parse.quote(message)
-    wa_link = (f"https://wa.me/1{phone}?text={encoded_message}")
-    return wa_link
+    wa_link_usa = (f"https://wa.me/{phone_usa}?text={encoded_message}")
+    return wa_link_usa
+
 
 if __name__ == "__main__":
     app.run()
